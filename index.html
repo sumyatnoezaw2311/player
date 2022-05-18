@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="wickedcss.min.css">
+    <link rel="stylesheet" href="node_modules/feather-icons/feather.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="nowPlaying position-fixed top-0 p-5 d-flex d-lg-none w-100 justify-content-between align-items-start mx-auto">
+            <h4 class="fw-bold mb-0">Now Playing</h4>
+            <div class="listIcon">
+                <i class="feather-align-center fs-2 d-block d-md-none"></i>
+                <i class="feather-music fs-2 d-none d-md-block d-lg-none"></i>
+            </div>
+        </div>
+        <div class="row text-center w-100 d-flex justify-content-center">
+            <div class="col-10 col-lg-4">
+                <div class="nowPlaying d-none d-lg-block justify-content-between align-items-start mx-auto">
+                    <h4 class="fw-bold mb-0">Now Playing</h4>
+                    <div class="listIcon">
+                        <i class="feather-align-center fs-2 d-flex d-lg-none"></i>
+                        <i class="feather-music fs-2 d-none d-lg-none"></i>
+                    </div>
+                </div>
+                <div class="playArea">
+                    <div class="track-img d-flex align-items-center justify-content-center">
+                        <div class="hole"></div>
+                    </div>
+                    <audio src=""></audio>
+                    <div class="overflow-hidden titleContainer w-50 mx-auto mb-3">
+                        <p class="trackTitle text-light text-nowrap"></p>
+                    </div>
+                    <p class="displayDuration text-light mb-0">00:00 / 00:00</p>
+                    <div class="progress">
+                        <div class="current-progress bg-success"></div>
+                    </div>
+                    <div class="controls">
+                        <i class="previous fs-1 mx-3 feather-skip-back"></i>
+                        <i class="play fs-1 mx-3 feather-play-circle"></i>
+                        <i class="pause fs-1 mx-3 feather-pause-circle"></i>
+                        <i class="next fs-1 mx-3 feather-skip-forward"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-lg-4 listArea">
+                <h4 class="ms-5 fw-bold d-none d-lg-block">Playlist</h4>
+                <div class="">
+                    <ol class="list-group list-group-numbered py-3 list"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>    
+</body>
+</html>

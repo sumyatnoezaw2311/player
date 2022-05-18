@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    user-select: none;
+    color: #11ba6b;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.container-fluid{
+  background-color: rgb(25, 41, 41);
+}
+
+.list-group{
+    border: none !important;
+    height: 350px;
+    overflow: auto;
+    padding: 0px 30px;
+}
+.list-group-item{
+    background: none;
+    border: none;
+    text-align: left;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #11ba6b;
+}
+ 
+.track-img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 30px auto;
+  animation-duration: 10s;
+}
+.hole{
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+}
+@keyframes example {
+  0%   {margin-left: -400px}
+  100% {margin-right: -400px}
+}
+.animateTitle{
+  animation: example 5s 0s infinite linear;
+}
+.pause{
+  display: none;
+}
+.pauseState{
+  animation-play-state: paused;
+}
+.runState{
+  animation-play-state: running;
+}
+.progress{
+  width: 250px;
+  height: 5px;
+  background-color: rgb(0, 0, 0, 0.2);
+  margin: 10px auto 30px auto;
+}
+.current-progress{
+  width: 0%;
+  height: 100%;
+}
+
+@media (max-width: 780px) {
+  .controls{
+    margin-bottom: 30px;
+  }
+
+}
+@media (max-width: 400px) {
+  .titleContainer{
+    width: 75% !important;
+  }
+  .list-group{
+    padding: 0px;
+  }
+  .playArea{
+    display: block;
+  }
+  .listArea{
+    display: none;
+  }
+}
